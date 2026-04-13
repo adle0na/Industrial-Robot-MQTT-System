@@ -31,6 +31,16 @@ using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using M2MqttUnity;
 
+[Serializable]
+public class RobotData
+{
+    public float joint1;
+    public float joint2;
+    public float joint3;
+    public float joint4;
+    public float joint5;
+}
+
 /// <summary>
 /// Examples for the M2MQTT library (https://github.com/eclipse/paho.mqtt.m2mqtt),
 /// </summary>
@@ -56,6 +66,9 @@ namespace M2MqttUnity.Examples
         private List<string> eventMessages = new List<string>();
         private bool updateUI = false;
 
+        public Claw clawController;
+        public Conveyor conveyorController;
+        
         public void TestPublish()
         {
             client.Publish("rua/mqtt/test123", System.Text.Encoding.UTF8.GetBytes("Test message"), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
@@ -200,20 +213,6 @@ namespace M2MqttUnity.Examples
             base.Start();
         }
 
-        protected override void DecodeMessage(string topic, byte[] message)
-        {
-            string msg = System.Text.Encoding.UTF8.GetString(message);
-            Debug.Log("Received: " + msg);
-            
-            GameObject player = GameObject.Find("Player");
-            if (player != null)
-            {
-                player.GetComponent<MQTT_PlayerController>().Move(msg);
-            }
-
-            StoreMessage(msg);
-        }
-
         private void StoreMessage(string eventMsg)
         {
             eventMessages.Add(eventMsg);
@@ -252,6 +251,37 @@ namespace M2MqttUnity.Examples
             if (autoTest)
             {
                 autoConnect = true;
+            }
+        }
+        
+        [Serializable]
+        public class ConveyorData
+        {
+            public string conveyor;
+        }
+        
+        protected override void DecodeMessage(string topic, byte[] message)
+        {
+            string msg = System.Text.Encoding.UTF8.GetString(message);
+            Debug.Log("Received: " + msg);
+
+            // 로그 출력
+            AddUiMessage("Received: " + msg);
+
+            ConveyorData data = JsonUtility.FromJson<ConveyorData>(msg);
+
+            if (data != null && !string.IsNullOrEmpty(data.conveyor))
+            {
+                if (data.conveyor == "start")
+                {
+                    conveyorController.StartConveyor();
+                    AddUiMessage("컨베이어 시작");
+                }
+                else if (data.conveyor == "stop")
+                {
+                    conveyorController.StopConveyor();
+                    AddUiMessage("컨베이어 정지");
+                }
             }
         }
     }

@@ -1108,3 +1108,153 @@ Memory consumption went from 100.1 MB to 93.9 MB.
 Total: 11.902200 ms (FindLiveObjects: 0.296500 ms CreateObjectMapping: 0.254000 ms MarkObjects: 8.862800 ms  DeleteObjects: 2.488200 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.518 seconds
+Refreshing native plugins compatible for Editor in 2.53 ms, found 2 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.617 seconds
+Domain Reload Profiling: 1134ms
+	BeginReloadAssembly (185ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (50ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (266ms)
+		LoadAssemblies (257ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (96ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (86ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (618ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (514ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (112ms)
+			ProcessInitializeOnLoadAttributes (218ms)
+			ProcessInitializeOnLoadMethodAttributes (163ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 2.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3098 unused Assets / (5.9 MB). Loaded Objects now: 3625.
+Memory consumption went from 100.1 MB to 94.2 MB.
+Total: 12.125300 ms (FindLiveObjects: 0.303400 ms CreateObjectMapping: 0.278300 ms MarkObjects: 9.386900 ms  DeleteObjects: 2.156200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 6729.481101 seconds.
+  path: Assets/Robotic Arm2/Models/RaspberryPIRobotArm.fbx
+  artifactKey: Guid(e33f61506d72bd341ac78853d91ee16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Models/RaspberryPIRobotArm.fbx using Guid(e33f61506d72bd341ac78853d91ee16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '60f9de7edc12ca0235d0156d036013ab') in 0.7210238 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.425304 seconds.
+  path: Assets/Robotic Arm2/Texture/RobotArm_Albedo.png
+  artifactKey: Guid(d28d4094e5c53934f8473f205bace250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Texture/RobotArm_Albedo.png using Guid(d28d4094e5c53934f8473f205bace250) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+ -> (artifact id: 'bd3a50f21ce62ed432552dc913ace351') in 0.0351989 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001367 seconds.
+  path: Assets/Robotic Arm2/Texture/RobotArm_Metallic.png
+  artifactKey: Guid(68db5193e3c6a04489c02dbdc3527d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Texture/RobotArm_Metallic.png using Guid(68db5193e3c6a04489c02dbdc3527d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f59b665d3ec129c9161b905a1b8fdae0') in 0.0312151 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Robotic Arm2/Texture/Shields_Metallic.png
+  artifactKey: Guid(3be53f3cb63f53b4bbff8aeb383b6fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Texture/Shields_Metallic.png using Guid(3be53f3cb63f53b4bbff8aeb383b6fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '744a80d655ffe4b72da859dfbc1a4db6') in 0.0267816 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Robotic Arm2/Texture/Table_Metallic.png
+  artifactKey: Guid(31f573ba4ad5c2244bb3ed1646cd7d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Texture/Table_Metallic.png using Guid(31f573ba4ad5c2244bb3ed1646cd7d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '33d9d0b5e4c42022c7ae889fc943b159') in 0.0324729 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Robotic Arm2/Texture/Table_Roughness.png
+  artifactKey: Guid(1a7407f60fdcca34c93d49dca1d14dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Texture/Table_Roughness.png using Guid(1a7407f60fdcca34c93d49dca1d14dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5cc088a5b86d121f10f70210ef8817cc') in 0.0271303 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Robotic Arm2/Texture/RobotArm_Normal.png
+  artifactKey: Guid(5110757cf1c4cf947a050b09f3a20586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Texture/RobotArm_Normal.png using Guid(5110757cf1c4cf947a050b09f3a20586) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0cdc2035a3f28525ea0a8d7b3dd0bd32') in 0.0339912 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Robotic Arm2/Texture/RobotArm_Roughness.png
+  artifactKey: Guid(b4de29da11a62c2478da1f805f35a7dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Texture/RobotArm_Roughness.png using Guid(b4de29da11a62c2478da1f805f35a7dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5416b44498aa0fcb081fe1ee186e94f7') in 0.0272875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Robotic Arm2/Texture/Table_Occlusion.png
+  artifactKey: Guid(ee9b24fd9cf9de8409dd2591440fe37b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Texture/Table_Occlusion.png using Guid(ee9b24fd9cf9de8409dd2591440fe37b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a4d5cf79a818c4f31ad8e9e33dbfda06') in 0.018666 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.934329 seconds.
+  path: Assets/Robotic Arm2/Material/RobotArmShield.mat
+  artifactKey: Guid(b5693e8dd40258348adb7f3df3da2e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Material/RobotArmShield.mat using Guid(b5693e8dd40258348adb7f3df3da2e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '147bf6dc0caa240235760c29efffcb85') in 0.0608504 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.509453 seconds.
+  path: Assets/Robotic Arm2/Prefab/Table.prefab
+  artifactKey: Guid(31ff571b344b5b24f9cd78cc474dc480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Robotic Arm2/Prefab/Table.prefab using Guid(31ff571b344b5b24f9cd78cc474dc480) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9827f19242edf5063bc475189ec94875') in 0.063726 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -14,8 +14,7 @@ public class Claw : MonoBehaviour
     Button ClawButton;
     void Start()
     {
-
-        ClawButton= GameObject.Find("ClawButton").GetComponent<Button>();
+        //ClawButton= GameObject.Find("ClawButton").GetComponent<Button>();
 
         ClawAnimator.enabled = false;
         Robotic_slider[0].onValueChanged.AddListener(delegate { OnSliderChanged(Robotic_slider[0].value, 0, 180); });
@@ -66,5 +65,10 @@ public class Claw : MonoBehaviour
         {
             Robotic_obj[i].transform.localRotation = Quaternion.Euler(0, 0, Robotic_slider[i].value);
         }
+    }
+    
+    public void SetSliderValue(int index, float value)
+    {
+        Robotic_slider[index].value = value;
     }
 }
