@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ca668c01af088c744837a2c5af20f43e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Materials/ExampleSceneMaterials/WallMat
+    2.mat
+  uploadId: 781952

@@ -25,11 +25,13 @@ SOFTWARE.
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ConveyorBelt;
 using UnityEngine;
 using UnityEngine.UI;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using M2MqttUnity;
+using TMPro;
 
 [Serializable]
 public class RobotData
@@ -62,12 +64,15 @@ namespace M2MqttUnity.Examples
         public Button disconnectButton;
         public Button testPublishButton;
         public Button clearButton;
+        public TMP_Text conveyorStatusText;
 
         private List<string> eventMessages = new List<string>();
         private bool updateUI = false;
 
         public Claw clawController;
         public Conveyor conveyorController;
+
+        public List<ConveyorBeltLogic> conveyorBeltLogics; 
         
         public void TestPublish()
         {
@@ -275,13 +280,27 @@ namespace M2MqttUnity.Examples
                 if (data.conveyor == "start")
                 {
                     conveyorController.StartConveyor();
-                    AddUiMessage("컨베이어 시작");
+                    AddUiMessage("[MQTT] Conveyor START");
+                    conveyorStatusText.text = "RUNNING";
+                    conveyorStatusText.color = Color.green;
+                    ConveyorONOFF(true);
                 }
                 else if (data.conveyor == "stop")
                 {
                     conveyorController.StopConveyor();
-                    AddUiMessage("컨베이어 정지");
+                    AddUiMessage("[MQTT] Conveyor STOP");
+                    conveyorStatusText.text = "STOPPED";
+                    conveyorStatusText.color = Color.red;
+                    ConveyorONOFF(false);
                 }
+            }
+        }
+
+        private void ConveyorONOFF(bool isON)
+        {
+            foreach (var belt in conveyorBeltLogics)
+            {
+                belt.speed = isON ? 2 : 0;
             }
         }
     }

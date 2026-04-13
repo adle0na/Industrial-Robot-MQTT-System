@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 44f81c746e2c1c34184167cf383a21c6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Materials/Block.mat
+  uploadId: 781952

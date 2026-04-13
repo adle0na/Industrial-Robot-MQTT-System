@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f3d936197b5abcf48a01fccdf090ed4f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Prefabs/Belts/Splitter.prefab
+  uploadId: 781952

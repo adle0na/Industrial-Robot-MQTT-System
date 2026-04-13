@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5137258fcc189fb4facdeac2f1d4cbb2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Prefabs/Belts/Drop.prefab
+  uploadId: 781952

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 001f01805545c36498b156468cf4f0a7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Prefabs/Structure/Floor.prefab
+  uploadId: 781952

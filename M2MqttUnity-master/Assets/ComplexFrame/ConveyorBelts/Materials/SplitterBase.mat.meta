@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dfead1b160c885c40b87b7d86b5c4134
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Materials/SplitterBase.mat
+  uploadId: 781952

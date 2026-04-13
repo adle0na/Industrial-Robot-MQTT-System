@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 12ad466d0727b004eb5cda9fbc1c8a60
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Prefabs/Belts/Lift.prefab
+  uploadId: 781952

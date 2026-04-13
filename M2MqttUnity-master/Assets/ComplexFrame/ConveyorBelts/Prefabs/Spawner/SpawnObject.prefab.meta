@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 694cf6713428e7541b6855f68241ba3e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Prefabs/Spawner/SpawnObject.prefab
+  uploadId: 781952

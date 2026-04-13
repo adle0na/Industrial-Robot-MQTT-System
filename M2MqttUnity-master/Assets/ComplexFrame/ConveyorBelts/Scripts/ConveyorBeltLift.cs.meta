@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a93b4d1035e2daf4eb38eba174e77d47
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Scripts/ConveyorBeltLift.cs
+  uploadId: 781952

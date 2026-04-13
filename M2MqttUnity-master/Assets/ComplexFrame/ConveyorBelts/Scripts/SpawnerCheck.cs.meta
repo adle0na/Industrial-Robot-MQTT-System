@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8b9a6029a712a39408e4d1db2bf0c270
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303340
+  packageName: Conveyor Belts
+  packageVersion: 1.1.0
+  assetPath: Assets/ComplexFrame/ConveyorBelts/Scripts/SpawnerCheck.cs
+  uploadId: 781952
