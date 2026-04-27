@@ -43,6 +43,12 @@ public class RobotData
     public float joint5;
 }
 
+[Serializable]
+public class SensorData
+{
+    public string sensor;
+}
+
 /// <summary>
 /// Examples for the M2MQTT library (https://github.com/eclipse/paho.mqtt.m2mqtt),
 /// </summary>
@@ -71,6 +77,7 @@ namespace M2MqttUnity.Examples
 
         public Claw clawController;
         public Conveyor conveyorController;
+        public ObjectSpawner objectSpawner;
 
         public List<ConveyorBeltLogic> conveyorBeltLogics; 
         
@@ -216,6 +223,8 @@ namespace M2MqttUnity.Examples
             SetUiMessage("Ready.");
             updateUI = true;
             base.Start();
+
+            clawController.PickObject();
         }
 
         private void StoreMessage(string eventMsg)
@@ -270,9 +279,9 @@ namespace M2MqttUnity.Examples
             string msg = System.Text.Encoding.UTF8.GetString(message);
             Debug.Log("Received: " + msg);
 
-            // 로그 출력
             AddUiMessage("Received: " + msg);
 
+            // 🔹 기존 컨베이어 처리
             ConveyorData data = JsonUtility.FromJson<ConveyorData>(msg);
 
             if (data != null && !string.IsNullOrEmpty(data.conveyor))
@@ -294,14 +303,35 @@ namespace M2MqttUnity.Examples
                     ConveyorONOFF(false);
                 }
             }
+
+            // 🔥 🔥 추가: 센서 감지 처리 🔥 🔥
+            SensorData sensorData = JsonUtility.FromJson<SensorData>(msg);
+
+            if (sensorData != null && sensorData.sensor == "detected")
+            {
+                AddUiMessage("[MQTT] SENSOR DETECTED");
+
+                // 1️⃣ 컨베이어 정지
+                conveyorController.StopConveyor();
+                ConveyorONOFF(false);
+
+                // 2️⃣ 로봇팔 실행
+                if (clawController != null)
+                {
+                    clawController.PickObject();
+                    AddUiMessage("[ROBOT] Pick Sequence Start");
+                }
+            }
         }
 
         private void ConveyorONOFF(bool isON)
         {
             foreach (var belt in conveyorBeltLogics)
             {
-                belt.speed = isON ? 2 : 0;
+                belt.speed = isON ? 0.5f : 0;
             }
+            
+            objectSpawner.power = isON;
         }
     }
 }

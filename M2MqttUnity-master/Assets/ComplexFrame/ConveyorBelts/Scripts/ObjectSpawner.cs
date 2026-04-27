@@ -13,8 +13,12 @@ namespace ConveyorBelt
         float Timer = 0.5f;
         public SpawnerCheck spawnCheck;
 
+        public bool power = false;
+        
         void Update()
         {
+            if (!power) return;
+            
             if (!spawnCheck.Full)
             {
                 if (Timer <= 0)
